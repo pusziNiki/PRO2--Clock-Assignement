@@ -83,8 +83,9 @@ class Ball {
       noFill(); // Set fill to none
       stroke(255); // Set stroke color to white
     } else { // For other balls
-      noStroke(); // Set stroke to none
-      fill(226, 50, 50); // Set fill color
+      stroke(0,0,0,10); // Set stroke to none
+      strokeWeight(5)
+      fill(226, 0, 50); // Set fill color
     }
     ellipse(this.position.x, this.position.y, this.r * 2, this.r * 2);
   }
@@ -157,9 +158,7 @@ function draw() {
   // Display lines
   line1.display();
   line2.display();
-  fill(205)
-  text('Move the balls to reveal the time! (ps.: use your fingertips)', width/2-150, height/2+300)
-
+  
   // Get the current time components from the system clock
   let currentSeconds = second();
   let currentMinutes = minute();
